@@ -1,0 +1,37 @@
+{
+  "$id": "https://covcloud.com/schemas/gl/rating/glpolicyperiod",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "General Liability Policy Period",
+  "type": "object",
+  "properties": {
+    "effectiveDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Policy Period effective date",
+      "example": "2023-01-01T00:00:00Z"
+    },
+    "expirationDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Policy Period expiration date",
+      "example": "2024-01-01T00:00:00Z"
+    },
+    "policyOverride": {
+      "type": "string",
+      "description": "If present, the policy level premium override",
+      "example": "5000"
+    },
+    "transactionType": {
+      "type": "string",
+      "description": "The transaction creating this period",
+      "example": "submission",
+      "enum": [
+        "submission",
+        "policychange",
+        "renewal",
+        "rewrite",
+        "cancellation"
+      ]
+    }
+  }
+}

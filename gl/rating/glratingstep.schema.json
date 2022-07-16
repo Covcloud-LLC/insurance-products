@@ -1,0 +1,18 @@
+{
+  "$id": "https://covcloud.com/schemas/gl/rating/glratingstep",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "General Liability Rating Step",
+  "type": "object",
+  "properties": {
+    "order": {
+      "type": "integer",
+      "description": "Rating order",
+      "example": 0
+    },
+    "rateableRef": {
+      "type": "string",
+      "description": "Id of the rateable",
+      "example": "exposure-1-1"
+    }
+  }
+}

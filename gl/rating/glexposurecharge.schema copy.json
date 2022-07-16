@@ -1,0 +1,32 @@
+{
+  "$id": "https://covcloud.com/schemas/gl/rating/glexposurecharge",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "General Liability Exposure Charge",
+  "type": "object",
+  "properties": {
+    "exposureRateableRef": {
+      "type": "string",
+      "description": "The ID of the exposure rateablet",
+      "example": "exposure-1-1"
+    },
+    "effectiveDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Charge effective date",
+      "example": "2023-01-01T00:00:00Z"
+    },
+    "currency": {
+      "type": "string",
+      "enum": ["usd"],
+      "example": "usd"
+    },
+    "chargeType": {
+      "type": "string",
+      "enum": ["premium", "fees", "taxes"]
+    },
+    "amount": {
+      "type": "string",
+      "format": "cov-decimal"
+    }
+  }
+}

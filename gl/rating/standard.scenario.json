@@ -2,6 +2,7 @@
   "id": "gl-standard-submission-scenario",
   "description": "Standard submission GL rating scenario",
   "productRef": "gl",
+  "paramsSchemaRef": "#/products/common/schemas/scenarioparams",
   "inputSchemaRef": "#/products/gl/rating/schemas/standardscenarioinput",
   "outputSchemaRef": "#/products/gl/rating/schemas/ratingoutput",
   "dependencies": [

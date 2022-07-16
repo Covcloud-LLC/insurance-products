@@ -1,0 +1,23 @@
+{
+  "$id": "https://covcloud.com/products/common/schemas/scenarioparams",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rating scenario params schema",
+  "type": "object",
+  "properties": {
+    "emitCharges": {
+      "type": "boolean",
+      "description": "Whether or not to emit the charges",
+      "example": true
+    },
+    "emitSteps": {
+      "type": "boolean",
+      "description": "Whether or not to emit the rating steps",
+      "example": true
+    },
+    "emitRateables": {
+      "type": "boolean",
+      "description": "Whether or not to emit the rateables",
+      "example": true
+    }
+  }
+}

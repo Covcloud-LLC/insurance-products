@@ -4,10 +4,22 @@
   "title": "General Liability Exposure Charge",
   "type": "object",
   "properties": {
-    "exposureRateableRef": {
+    "amount": {
       "type": "string",
-      "description": "The ID of the exposure rateablet",
-      "example": "exposure-1-1"
+      "format": "cov-decimal"
+    },
+    "chargeType": {
+      "type": "string",
+      "enum": ["premium", "fee", "tax"]
+    },
+    "currency": {
+      "type": "string",
+      "enum": ["usd"],
+      "example": "usd"
+    },
+    "earningStrategy": {
+      "type": "string",
+      "enum": ["standard_per_day", "fully_earned"]
     },
     "effectiveDate": {
       "type": "string",
@@ -15,16 +27,22 @@
       "description": "Charge effective date",
       "example": "2023-01-01T00:00:00Z"
     },
-    "currency": {
+    "expirationDate": {
       "type": "string",
-      "enum": ["usd"],
-      "example": "usd"
+      "format": "date-time",
+      "description": "Charge expiration date",
+      "example": "2023-01-01T00:00:00Z"
     },
-    "chargeType": {
+    "exposureRateableRef": {
       "type": "string",
-      "enum": ["premium", "fees", "taxes"]
+      "description": "The ID of the exposure rateablet",
+      "example": "exposure-1-1"
     },
-    "amount": {
+    "standardTermAmount": {
+      "type": "string",
+      "format": "cov-decimal"
+    },
+    "standardTermAmountProrataFactor": {
       "type": "string",
       "format": "cov-decimal"
     }

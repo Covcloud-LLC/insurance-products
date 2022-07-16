@@ -9,28 +9,20 @@
       "description": "Unique id of the rating item",
       "example": "exposure-1-1"
     },
-    "currency": {
+    "basisAmount": {
       "type": "string",
-      "enum": ["usd"],
-      "description": "If amount is a currency, which currency",
-      "example": "usd"
+      "format": "cov-decimal",
+      "example": "2500000"
     },
-    "exposureRef": {
+    "basisAmountProrataFactor": {
       "type": "string",
-      "description": "Reference to the exposure",
-      "example": "exposure-1"
+      "format": "cov-decimal",
+      "example": "0.880"
     },
-    "effectiveDate": {
+    "basisAmountStandard": {
       "type": "string",
-      "format": "date-time",
-      "description": "Exposure rating item effective date",
-      "example": "2023-01-01T00:00:00Z"
-    },
-    "expirationDate": {
-      "type": "string",
-      "format": "date-time",
-      "description": "Exposure rating item expiration date",
-      "example": "2024-01-01T00:00:00Z"
+      "format": "cov-decimal",
+      "example": "2500000"
     },
     "basisFactor": {
       "type": "string",
@@ -52,26 +44,73 @@
         "admissions"
       ]
     },
-    "amount": {
+    "currency": {
       "type": "string",
-      "format": "cov-decimal",
-      "example": "2500000"
+      "enum": ["usd"],
+      "description": "If amount is a currency, which currency",
+      "example": "usd"
     },
-    "rate": {
+    "effectiveDate": {
       "type": "string",
-      "format": "cov-decimal",
-      "description": "The rate that will be used for rating",
-      "example": "2.303"
+      "format": "date-time",
+      "description": "Exposure rating item effective date",
+      "example": "2023-01-01T00:00:00Z"
     },
-    "territoryCode": {
+    "exposureRef": {
       "type": "string",
-      "description": "The relevant territory code",
-      "example": "201"
+      "description": "Reference to the exposure",
+      "example": "exposure-1"
+    },
+    "expirationDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Exposure rating item expiration date",
+      "example": "2024-01-01T00:00:00Z"
     },
     "jurisdiction": {
       "type": "string",
       "description": "The relevant jurisdiction",
       "example": "ca"
+    },
+    "premiumOverride": {
+      "type": "string",
+      "format": "cov-decimal",
+      "description": "The optional exposure-level premium override",
+      "example": "5000"
+    },
+    "rate": {
+      "type": "string",
+      "format": "cov-decimal",
+      "description": "The rate used for calculation",
+      "example": "2.303"
+    },
+    "rateProrataFactor": {
+      "type": "string",
+      "format": "cov-decimal",
+      "description": "The pro-rata factor for the rate",
+      "example": "1.000"
+    },
+    "rateStandard": {
+      "type": "string",
+      "format": "cov-decimal",
+      "description": "The standard rate",
+      "example": "2.303"
+    },
+    "rateOverride": {
+      "type": "string",
+      "format": "cov-decimal",
+      "description": "The optional override rate",
+      "example": "2.303"
+    },
+    "scalingStrategy": {
+      "type": "string",
+      "example": "standardTermAmount",
+      "enum": ["basisAmount", "rate", "standardTermAmount", "none"]
+    },
+    "territoryCode": {
+      "type": "string",
+      "description": "The relevant territory code",
+      "example": "201"
     }
   }
 }

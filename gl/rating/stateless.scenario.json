@@ -3,7 +3,7 @@
   "description": "Stateless submission GL rating scenario",
   "productRef": "gl",
   "paramsSchemaRef": "#/products/common/schemas/scenarioparams",
-  "inputSchemaRef": "#/products/gl/rating/schemas/statelesscenarioinput",
+  "inputSchemaRef": "#/products/gl/rating/schemas/statelessscenarioinput",
   "outputSchemaRef": "#/products/gl/rating/schemas/ratingoutput",
   "persistenceStrategy": "none"
 }

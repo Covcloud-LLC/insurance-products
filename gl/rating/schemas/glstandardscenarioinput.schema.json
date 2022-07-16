@@ -1,11 +1,11 @@
 {
-  "$id": "http://covcloud.com/products/gl/rating/schemas/ratinginput",
+  "$id": "http://covcloud.com/products/gl/rating/schemas/glstandardscenarioinput",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "General Liability Standard Scenario Rating Inputs",
   "type": "object",
   "properties": {
     "submissionRef": {
-      "ref": "#/products/gl/rating/schemas/glpolicycontract"
+      "$ref": "glpolicycontract.schema.json"
     }
   }
 }

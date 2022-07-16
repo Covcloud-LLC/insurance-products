@@ -6,7 +6,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique id of the rating item",
+      "description": "Unique id of the rateable",
       "example": "exposure-1-1"
     },
     "subline": {
@@ -118,7 +118,7 @@
       "description": "The prorata factor to be applied to the standard term amount",
       "example": "1.000"
     },
-    "territoryCode": {
+    "territory": {
       "type": "string",
       "description": "The relevant territory code",
       "example": "201"

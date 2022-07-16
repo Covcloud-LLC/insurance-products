@@ -1,7 +1,7 @@
 {
-  "$id": "http://covcloud.com/products/gl/rating/schemas/glratingstep",
+  "$id": "http://covcloud.com/products/common/rating/schemas/step",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "General Liability Rating Step",
+  "title": "Rating Step",
   "type": "object",
   "properties": {
     "order": {

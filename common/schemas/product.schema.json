@@ -1,5 +1,5 @@
 {
-  "$id": "https://covcloud.com/products/common/schemas/product",
+  "$id": "http://covcloud.com/products/common/rating/schemas/schemas/product",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Insurance product schema",
   "type": "object",

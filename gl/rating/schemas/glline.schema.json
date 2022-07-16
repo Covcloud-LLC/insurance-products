@@ -16,15 +16,23 @@
       "description": "Exposure expiration date",
       "example": "2024-01-01T00:00:00Z"
     },
+    "id": {
+      "type": "string",
+      "description": "Id",
+      "example": "gl-line-1"
+    },
     "limit": {
-      "bi": {
-        "$ref": "#/$defs/limits"
-      },
-      "pd": {
-        "$ref": "#/$defs/limits"
-      },
-      "bipd": {
-        "$ref": "#/$defs/limits"
+      "type": "object",
+      "properties": {
+        "bi": {
+          "$ref": "#/$defs/limits"
+        },
+        "pd": {
+          "$ref": "#/$defs/limits"
+        },
+        "bipd": {
+          "$ref": "#/$defs/limits"
+        }
       }
     },
     "deductible": {

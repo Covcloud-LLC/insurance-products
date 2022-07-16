@@ -1,7 +1,7 @@
 {
-  "$id": "http://covcloud.com/products/gl/rating/schemas/glexposurecharge",
+  "$id": "http://covcloud.com/products/common/rating/schemas/charge",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "General Liability Exposure Charge",
+  "title": "Charge",
   "type": "object",
   "properties": {
     "amount": {

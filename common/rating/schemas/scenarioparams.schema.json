@@ -1,5 +1,5 @@
 {
-  "$id": "https://covcloud.com/products/common/schemas/scenarioparams",
+  "$id": "http://covcloud.com/products/common/rating/schemas/scenarioparams",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Rating scenario params schema",
   "type": "object",

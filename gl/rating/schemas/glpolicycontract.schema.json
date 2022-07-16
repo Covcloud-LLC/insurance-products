@@ -21,6 +21,11 @@
       "description": "Policy Contract expiration date",
       "example": "2024-01-01T00:00:00Z"
     },
+    "id": {
+      "type": "string",
+      "description": "Id",
+      "example": "gl-policy-contract-1"
+    },
     "policyOverride": {
       "type": "string",
       "description": "If present, the policy level premium override",

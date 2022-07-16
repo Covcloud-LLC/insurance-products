@@ -1,0 +1,23 @@
+{
+  "$id": "http://covcloud.com/products/gl/rating/schemas/glstatelessscenarioinput",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "General Liability Stateless Scenario Rating Inputs",
+  "type": "object",
+  "properties": {
+    "contract": {
+      "$ref": "glpolicycontract.schema.json"
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "$ref": "glline.schema.json"
+      }
+    },
+    "exposures": {
+      "type": "array",
+      "items": {
+        "$ref": "glexposure.schema.json"
+      }
+    }
+  }
+}

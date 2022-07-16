@@ -1,25 +1,25 @@
 {
-  "$id": "http://covcloud.com/products/gl/rating/schemas/ratingoutput",
+  "$id": "http://covcloud.com/products/gl/rating/schemas/glratingoutput",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "General Liability Rating Inputs",
+  "title": "Rating Output",
   "type": "object",
   "properties": {
     "rateables": {
       "type": "array",
       "items": {
-        "ref": "/schemas/gl/rating/glexposurerateable"
+        "$ref": "glexposurerateable.schema.json"
       }
     },
     "steps": {
       "type": "array",
       "items": {
-        "ref": "/schemas/gl/rating/glratingstep"
+        "$ref": "../../../common/rating/schemas/step.schema.json"
       }
     },
     "charges": {
       "type": "array",
       "items": {
-        "ref": "/schemas/gl/rating/glexposurecharge"
+        "$ref": "../../../common/rating/schemas/charge.schema.json"
       }
     }
   }

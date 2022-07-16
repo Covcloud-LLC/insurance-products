@@ -24,6 +24,12 @@
       "example": "none",
       "enum": ["none", "store"]
     },
+    "inputSchemaRef": {
+      "type": "string"
+    },
+    "outputSchemaRef": {
+      "type": "string"
+    },
     "parameters": {
       "type": "array",
       "description": "List of attributes",

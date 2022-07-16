@@ -1,0 +1,14 @@
+{
+  "id": "gl-standard-submission-scenario",
+  "description": "Standard submission GL rating scenario",
+  "productRef": "gl",
+  "inputSchemaRef": "#/products/gl/rating/schemas/standardscenarioinput",
+  "outputSchemaRef": "#/products/gl/rating/schemas/ratingoutput",
+  "dependencies": [
+    {
+      "name": "data",
+      "value": "submission"
+    }
+  ],
+  "persistenceStrategy": "store"
+}

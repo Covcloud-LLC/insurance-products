@@ -1,0 +1,8 @@
+{
+  "id": "gl-standard-submission-scenario",
+  "description": "Test submission GL rating scenario",
+  "productRef": "gl",
+  "inputSchemaRef": "#/products/gl/rating/schemas/testscenarioinput",
+  "outputSchemaRef": "#/products/gl/rating/schemas/ratingoutput",
+  "persistenceStrategy": "none"
+}

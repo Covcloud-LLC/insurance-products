@@ -1,5 +1,5 @@
 {
-  "$id": "https://covcloud.com/products/gl/rating/schemas/glexposurerateable",
+  "$id": "http://covcloud.com/products/gl/rating/schemas/glexposurerateable",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "General Liability Exposure Rateable Element",
   "type": "object",

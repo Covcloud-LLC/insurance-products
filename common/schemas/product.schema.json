@@ -1,0 +1,16 @@
+{
+  "$id": "https://covcloud.com/products/common/schemas/product",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Insurance product schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Product id"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    }
+  }
+}

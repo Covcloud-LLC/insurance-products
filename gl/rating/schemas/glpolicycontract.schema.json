@@ -1,5 +1,5 @@
 {
-  "$id": "https://covcloud.com/products/gl/rating/schemas/glpolicycontract",
+  "$id": "http://covcloud.com/products/gl/rating/schemas/glpolicycontract",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "General Liability Policy Contract",
   "type": "object",

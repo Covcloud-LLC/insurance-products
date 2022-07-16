@@ -1,19 +1,9 @@
 {
   "$id": "http://covcloud.com/products/gl/rating/schemas/glline",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "General Liability Exposure Rating Item",
+  "title": "General Liability Line",
   "type": "object",
   "properties": {
-    "limits": {
-      "type": "string",
-      "description": "GL limits lookup value",
-      "example": "1M/1M"
-    },
-    "deductible": {
-      "type": "string",
-      "description": "GL deductible lookup value",
-      "example": "SIR/250000"
-    },
     "effectiveDate": {
       "type": "string",
       "format": "date-time",
@@ -26,10 +16,34 @@
       "description": "Exposure expiration date",
       "example": "2024-01-01T00:00:00Z"
     },
+    "limit": {
+      "bi": {
+        "$ref": "#/$defs/limits"
+      },
+      "pd": {
+        "$ref": "#/$defs/limits"
+      },
+      "bipd": {
+        "$ref": "#/$defs/limits"
+      }
+    },
+    "deductible": {
+      "$ref": "#/$defs/deductibles"
+    },
     "modifier": {
       "type": "string",
       "description": "Line level modifier",
       "example": "0.10"
+    }
+  },
+  "$defs": {
+    "limits": {
+      "type": "string",
+      "enum": ["100k", "200k", "500k", "1m", "2m"]
+    },
+    "deductibles": {
+      "type": "string",
+      "enum": ["1000", "2500", "5000", "10000"]
     }
   }
 }

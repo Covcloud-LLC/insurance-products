@@ -9,6 +9,12 @@
       "description": "Unique id of the rating item",
       "example": "exposure-1-1"
     },
+    "subline": {
+      "type": "string",
+      "description": "Subline",
+      "example": "premises",
+      "enum": ["premises", "products", "liquor"]
+    },
     "basisAmount": {
       "type": "string",
       "format": "cov-decimal",
@@ -56,16 +62,16 @@
       "description": "Exposure rating item effective date",
       "example": "2023-01-01T00:00:00Z"
     },
-    "exposureRef": {
-      "type": "string",
-      "description": "Reference to the exposure",
-      "example": "exposure-1"
-    },
     "expirationDate": {
       "type": "string",
       "format": "date-time",
       "description": "Exposure rating item expiration date",
       "example": "2024-01-01T00:00:00Z"
+    },
+    "exposureRef": {
+      "type": "string",
+      "description": "Reference to the exposure",
+      "example": "exposure-1"
     },
     "jurisdiction": {
       "type": "string",

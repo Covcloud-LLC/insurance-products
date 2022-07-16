@@ -1,0 +1,32 @@
+{
+  "$id": "https://covcloud.com/products/common/schemas/test",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rating scenario test",
+  "type": "object",
+  "properties": {
+    "required": ["id"],
+    "id": {
+      "type": "string",
+      "example": "gl-annual-split-limits-1",
+      "description": "Unique id of the test case"
+    },
+    "description": {
+      "type": "string",
+      "example": "Annual policy with one exposure with split limits",
+      "description": "Description"
+    },
+    "scenarioRef": {
+      "type": "string",
+      "example": "#/products/gl/rating/gl-test-submission-scenario",
+      "description": "Rating scenario reference"
+    },
+    "input": {
+      "type": "object",
+      "description": "The scenario inputs"
+    },
+    "expected": {
+      "type": "object",
+      "description": "The expected scenario output"
+    }
+  }
+}

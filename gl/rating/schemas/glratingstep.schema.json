@@ -9,10 +9,48 @@
       "description": "Rating order",
       "example": 0
     },
+    "stepCode": {
+      "type": "string",
+      "description": "Step code",
+      "example": "rateexposure"
+    },
+    "handler": {
+      "type": "object",
+      "description": "Handler details",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "handler code",
+          "example": "glexposureroutine"
+        },
+        "params": {
+          "type": "string",
+          "description": "Handler params",
+          "$ref": "#/$defs/attribute"
+        }
+      }
+    },
     "rateableRef": {
       "type": "string",
       "description": "Id of the rateable",
       "example": "exposure-1-1"
+    }
+  },
+  "$defs": {
+    "attribute": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Attribute name",
+          "example": "Routine"
+        },
+        "value": {
+          "type": "string",
+          "description": "Attribute value",
+          "example": "ExposureRR"
+        }
+      }
     }
   }
 }

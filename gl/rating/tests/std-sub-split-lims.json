@@ -1,0 +1,78 @@
+{
+  "id": "std-annual-submission",
+  "description": "Standard annual submission",
+  "scenarioRef": "#/products/gl/rating/gl-test-submission-scenario",
+  "input": {
+    "contract": {
+      "effectiveDate": "2023-01-01T00:00:00Z",
+      "expirationDate": "2024-01-01T00:00:00Z",
+      "transactionType": "submission"
+    },
+    "lines": {
+      "limit": {
+        "bi": "1m",
+        "pd": "2m"
+      },
+      "deductible": "2500",
+      "effectiveDate": "2023-01-01T00:00:00Z",
+      "expirationDate": "2024-01-01T00:00:00Z",
+      "modifier": "0.10"
+    },
+    "exposures": {
+      "id": "exposure-1",
+      "amount": "1000000",
+      "classCode": "50702",
+      "effectiveDate": "2023-01-01T00:00:00Z",
+      "expirationDate": "2024-01-01T00:00:00Z",
+      "modifier": "0.05",
+      "territory": "34"
+    }
+  },
+  "expected": {
+    "rateables": [
+      {
+        "id": "{{rateableId}}",
+        "effectiveDate": "2023-01-01T00:00:00Z",
+        "expirationDate": "2024-01-01T00:00:00Z",
+        "modifier": "0.05",
+        "classCode": "50702",
+        "exposureRef": "exposure-1",
+        "currency": "usd",
+        "basisAmountStandard": "1000000",
+        "basisAmountProrataFactor": "1.000",
+        "basisAmount": "1000000",
+        "subline": "premises",
+        "basisFactor": "0.001",
+        "basisType": "sales",
+        "jurisdiction": "ca",
+        "rateStandard": "2.934",
+        "scalingStrategy": "standardTermAmount",
+        "territoryCode": "34"
+      }
+    ],
+    "steps": [
+      {
+        "order": 0,
+        "stepCode": "rateexposure",
+        "rateableRef": "{{rateableId}}",
+        "handler": {
+          "code": "glexposureroutine",
+          "params": [{ "name": "routine", "value": "ExposureRR" }]
+        }
+      }
+    ],
+    "charges": [
+      {
+        "amount": "203.00",
+        "chargeType": "premium",
+        "currency": "usd",
+        "earningStrategy": "standard_per_day",
+        "effectiveDate": "2023-01-01T00:00:00Z",
+        "expirationDate": "2024-01-01T00:00:00Z",
+        "exposureRateableRef": "{{rateableId}}",
+        "standardTermAmount": "203.00",
+        "standardTermAmountProrataFactor": "1.000"
+      }
+    ]
+  }
+}

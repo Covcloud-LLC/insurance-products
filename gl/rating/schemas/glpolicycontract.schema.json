@@ -4,6 +4,11 @@
   "title": "General Liability Policy Contract",
   "type": "object",
   "properties": {
+    "claimsBasis": {
+      "type": "string",
+      "example": "claimsmade",
+      "enum": ["claimsmade", "occurrence"]
+    },
     "effectiveDate": {
       "type": "string",
       "format": "date-time",

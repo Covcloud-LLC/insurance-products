@@ -1,19 +1,19 @@
 {
-  "$id": "https://covcloud.com/schemas/gl/rating/glpolicyperiod",
+  "$id": "https://covcloud.com/schemas/gl/rating/glpolicycontract",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "General Liability Policy Period",
+  "title": "General Liability Policy Contract",
   "type": "object",
   "properties": {
     "effectiveDate": {
       "type": "string",
       "format": "date-time",
-      "description": "Policy Period effective date",
+      "description": "Policy Contract effective date",
       "example": "2023-01-01T00:00:00Z"
     },
     "expirationDate": {
       "type": "string",
       "format": "date-time",
-      "description": "Policy Period expiration date",
+      "description": "Policy Contract expiration date",
       "example": "2024-01-01T00:00:00Z"
     },
     "policyOverride": {

@@ -4,8 +4,8 @@
   "title": "General Liability Rating Inputs",
   "type": "object",
   "properties": {
-    "policyPeriod": {
-      "ref": "#/schemas/gl/glpolicyperiod"
+    "contract": {
+      "ref": "#/schemas/gl/glpolicycontract"
     },
     "lines": {
       "type": "array",

@@ -24,31 +24,8 @@
           "example": "glexposureroutine"
         },
         "params": {
-          "type": "string",
-          "description": "Handler params",
-          "$ref": "#/$defs/attribute"
-        }
-      }
-    },
-    "rateableRef": {
-      "type": "string",
-      "description": "Id of the rateable",
-      "example": "exposure-1-1"
-    }
-  },
-  "$defs": {
-    "attribute": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Attribute name",
-          "example": "Routine"
-        },
-        "value": {
-          "type": "string",
-          "description": "Attribute value",
-          "example": "ExposureRR"
+          "type": "object",
+          "description": "Handler params"
         }
       }
     }

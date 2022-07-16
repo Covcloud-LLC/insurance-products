@@ -33,16 +33,12 @@
       "description": "Charge expiration date",
       "example": "2023-01-01T00:00:00Z"
     },
-    "exposureRateableRef": {
+    "rateableRef": {
       "type": "string",
-      "description": "The ID of the exposure rateablet",
+      "description": "The ID of the rateable",
       "example": "exposure-1-1"
     },
     "standardTermAmount": {
-      "type": "string",
-      "format": "cov-decimal"
-    },
-    "standardTermAmountProrataFactor": {
       "type": "string",
       "format": "cov-decimal"
     }

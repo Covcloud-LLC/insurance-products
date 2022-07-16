@@ -2,13 +2,16 @@
   "id": "std-annual-submission",
   "description": "Standard annual submission",
   "scenarioRef": "#/products/gl/rating/gl-test-submission-scenario",
+  "scenarioParams": {},
   "input": {
     "contract": {
+      "id": "gl-contract-1",
       "effectiveDate": "2023-01-01T00:00:00Z",
       "expirationDate": "2024-01-01T00:00:00Z",
       "transactionType": "submission"
     },
     "lines": {
+      "id": "gl-line-1",
       "limit": {
         "bi": "1m",
         "pd": "2m"
@@ -19,7 +22,7 @@
       "modifier": "0.10"
     },
     "exposures": {
-      "id": "exposure-1",
+      "id": "gl-exposure-1",
       "amount": "1000000",
       "classCode": "50702",
       "effectiveDate": "2023-01-01T00:00:00Z",
@@ -29,9 +32,14 @@
     }
   },
   "expected": {
+    "rateSetRef": {
+      "type": "string",
+      "description": "The rateset that was used for pricing",
+      "example": "gl-rateset-v1"
+    },
     "rateables": [
       {
-        "id": "{{rateableId}}",
+        "id": "{{rateableId1}}",
         "effectiveDate": "2023-01-01T00:00:00Z",
         "expirationDate": "2024-01-01T00:00:00Z",
         "modifier": "0.05",
@@ -54,10 +62,12 @@
       {
         "order": 0,
         "stepCode": "rateexposure",
-        "rateableRef": "{{rateableId}}",
         "handler": {
           "code": "glexposureroutine",
-          "params": [{ "name": "routine", "value": "ExposureRR" }]
+          "params": {
+            "routine": "ExposureRR",
+            "rateableRef": "{{rateableId1}}"
+          }
         }
       }
     ],
@@ -69,9 +79,8 @@
         "earningStrategy": "standard_per_day",
         "effectiveDate": "2023-01-01T00:00:00Z",
         "expirationDate": "2024-01-01T00:00:00Z",
-        "exposureRateableRef": "{{rateableId}}",
-        "standardTermAmount": "203.00",
-        "standardTermAmountProrataFactor": "1.000"
+        "rateableRef": "{{rateableId1}}",
+        "standardTermAmount": "203.00"
       }
     ]
   }

@@ -113,6 +113,11 @@
       "example": "standardTermAmount",
       "enum": ["basisAmount", "rate", "standardTermAmount", "none"]
     },
+    "standardTermAmountProrataFactor": {
+      "type": "string",
+      "description": "The prorata factor to be applied to the standard term amount",
+      "example": "1.000"
+    },
     "territoryCode": {
       "type": "string",
       "description": "The relevant territory code",

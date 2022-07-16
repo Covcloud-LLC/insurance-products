@@ -1,0 +1,57 @@
+{
+  "$id": "https://covcloud.com/products/common/schemas/scenario",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rating scenario schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Scenario id"
+    },
+    "description": {
+      "type": "string",
+      "description": "Scenario description",
+      "example": "gl"
+    },
+    "productRef": {
+      "type": "string",
+      "description": "Product reference",
+      "example": "gl"
+    },
+    "persistenceStrategy": {
+      "type": "string",
+      "description": "Persistence strategy",
+      "example": "none",
+      "enum": ["none", "store"]
+    },
+    "parameters": {
+      "type": "array",
+      "description": "List of attributes",
+      "items": {
+        "$ref": "#/$defs/attribute"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "List of dependencies",
+      "items": {
+        "$ref": "#/$defs/attribute"
+      }
+    }
+  },
+  "$defs": {
+    "attribute": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name"
+        },
+        "value": {
+          "type": "string",
+          "description": "Values"
+        }
+      }
+    }
+  }
+}

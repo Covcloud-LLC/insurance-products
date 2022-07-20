@@ -1,0 +1,22 @@
+{
+  "id": "gl-nonadmitted-base-rates",
+  "code": "baserates",
+  "name": "Base Rates",
+  "description": "GL Base Rates",
+  "version": "1.0.0",
+  "status": "draft",
+  "columns": {
+    "classcode": {
+      "order": 0,
+      "name": "Class Code",
+      "type": "string",
+      "description": "Class Code"
+    },
+    "rate": {
+      "order": 1,
+      "name": "Rate",
+      "type": "decimal",
+      "description": "Rate"
+    }
+  }
+}

@@ -41,6 +41,23 @@
     }
   },
   "$defs": {
+    "Attribute": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["number", "string", "boolean"]
+        },
+        "name": {
+          "type": "string",
+          "description": "Attribute name"
+        },
+        "description": {
+          "type": "string",
+          "description": "Attribute description "
+        }
+      }
+    },
     "Column": {
       "type": "object",
       "properties": {
@@ -59,6 +76,17 @@
         "description": {
           "type": "string",
           "description": "Longer description"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["string", "integer", "decimal", "bit"]
+        },
+        "attributes": {
+          "type": "array",
+          "description": "Custom attributes",
+          "items": {
+            "$ref": "#/$defs/Attribute"
+          }
         }
       }
     },

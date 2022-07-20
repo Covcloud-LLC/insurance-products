@@ -1,0 +1,84 @@
+{
+  "$id": "http://covcloud.com/products/gl-nonadmitted/rateset/scenarios",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Exposure Rating Scenario",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Exposure"
+      }
+    },
+    "output": {}
+  },
+  "$defs": {
+    "Exposure": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier"
+      },
+      "effectiveDate": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Exposure effective date"
+      },
+      "expirationDate": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Exposure expiration date"
+      },
+      "territory": {
+        "type": "string",
+        "description": "Territory code"
+      },
+      "classcode": {
+        "type": "string",
+        "description": "Class code"
+      },
+      "hazard": {
+        "type": "string",
+        "description": "Hazard severity level",
+        "enum": ["low", "medium", "high"]
+      },
+      "overrideRate": {
+        "type": "string",
+        "description": "Optional override rate"
+      },
+      "overridePremium": {
+        "type": "string",
+        "description": "Optional override premium"
+      }
+    },
+    "Line": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier"
+      },
+      "effectiveDate": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Line effective date"
+      },
+      "expirationDate": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Line expiration date"
+      },
+      "limits": {
+        "type": "string",
+        "description": "Limits"
+      },
+      "deductibles": {
+        "type": "string",
+        "description": "Deductibles"
+      }
+    },
+    "Rateable": {
+      "allOf": [{ "$ref": "#/$defs/Exposure" }],
+      "subline": {
+        "enum": ["premises", "operations", "liquoe"]
+      }
+    }
+  }
+}

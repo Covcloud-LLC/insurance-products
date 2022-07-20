@@ -1,0 +1,33 @@
+{
+  "id": "gl-nonadmitted-class-codes",
+  "code": "classcodes",
+  "name": "Class Codes",
+  "description": "GL Class Codes",
+  "version": "1.0.0",
+  "status": "draft",
+  "columns": {
+    "classcode": {
+      "order": 0,
+      "name": "Class Code",
+      "type": "string",
+      "description": "Class Code"
+    },
+    "description": {
+      "order": 1,
+      "name": "Description",
+      "type": "string",
+      "description": "Class Code description"
+    },
+    "basistype": {
+      "order": 2,
+      "name": "Basis Type",
+      "type": "string",
+      "enum": ["sales", "payroll", "sqft", "acres", "operations"]
+    },
+    "perunit": {
+      "order": 3,
+      "name": "Per Unit Factor",
+      "type": "string"
+    }
+  }
+}

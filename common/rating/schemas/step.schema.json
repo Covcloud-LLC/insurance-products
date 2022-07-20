@@ -9,11 +9,6 @@
       "description": "Rating order",
       "example": 0
     },
-    "stepCode": {
-      "type": "string",
-      "description": "Step code",
-      "example": "rateexposure"
-    },
     "handler": {
       "type": "object",
       "description": "Handler details",

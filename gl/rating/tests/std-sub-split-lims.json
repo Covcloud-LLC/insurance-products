@@ -1,7 +1,7 @@
 {
   "id": "std-annual-submission",
   "description": "Standard annual submission",
-  "scenarioRef": "#/products/gl/rating/gl-test-submission-scenario",
+  "scenarioRef": "gl-stateless-submission-scenario",
   "scenarioParams": {},
   "input": {
     "contract": {
@@ -65,7 +65,6 @@
     "steps": [
       {
         "order": 0,
-        "stepCode": "rateexposure",
         "handler": {
           "code": "glexposureroutine",
           "params": {

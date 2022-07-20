@@ -1,0 +1,88 @@
+{
+  "$id": "http://covcloud.com/products/common/rating/schemas/dataset",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dataset schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Globally unique dataset id"
+    },
+    "code": {
+      "type": "string",
+      "description": "Short code"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable display name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Longer description"
+    },
+    "version": {
+      "type": "string",
+      "description": "Dataset version"
+    },
+    "status": {
+      "type": "string",
+      "description": "Dataset status",
+      "enum": ["draft", "published"]
+    },
+    "columns": {
+      "type": "array",
+      "description": "Dataset columns",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/$defs/StringColumn" },
+          { "$ref": "#/$defs/IntColumn" }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "Column": {
+      "type": "object",
+      "properties": {
+        "order": {
+          "type": "integer",
+          "description": "Column order"
+        },
+        "code": {
+          "type": "string",
+          "description": "Short code"
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable display name"
+        },
+        "description": {
+          "type": "string",
+          "description": "Longer description"
+        }
+      }
+    },
+    "StringColumn": {
+      "allOf": [{ "$ref": "#/$defs/Column" }]
+    },
+    "IntColumn": {
+      "allOf": [{ "$ref": "#/$defs/Column" }]
+    },
+    "BitColumn": {
+      "allOf": [{ "$ref": "#/$defs/Column" }]
+    },
+    "DecimalColumn": {
+      "allOf": [{ "$ref": "#/$defs/Column" }],
+      "properties": {
+        "scale": {
+          "type": "integer",
+          "description": "Decimal scale"
+        },
+        "precision": {
+          "type": "integer",
+          "description": "Decimal precision"
+        }
+      }
+    }
+  }
+}

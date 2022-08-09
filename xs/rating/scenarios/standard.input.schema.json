@@ -1,0 +1,166 @@
+{
+  "$id": "http://covcloud.com/products/xs/scenarios/standard.input",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "XS Standard Scenario Rating Inputs",
+  "type": "object",
+  "properties": {
+    "excessCoverages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ExcessCoverage"
+      },
+      "minimum": 1
+    },
+    "underlyingCasualtyPolicies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/UnderlyingCasualty"
+      }
+    },
+    "underlyingAutoPolicies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/UnderlyingAuto"
+      }
+    }
+  },
+  "$defs": {
+    "ExcessCoverage": {
+      "type": "object",
+      "description": "Excess coverage properties",
+      "required": ["attachmentGL", "excessCapacity", "schedMod"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier"
+        },
+        "effectiveDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Underlying auto effective date"
+        },
+        "expirationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Underlying auto expiration date"
+        },
+        "attachmentGL": {
+          "type": "integer",
+          "description": "Attachment for GL in millions",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "attachmentAuto": {
+          "type": "integer",
+          "description": "Attachment for Auto in millions",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "excessLimit": {
+          "type": "integer",
+          "description": "The excess limit (in millions)",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "schedMod": {
+          "type": "string",
+          "format": "cov-decimal",
+          "description": "Schedule modifier, expressed as a decimal"
+        }
+      }
+    },
+    "UnderlyingCasualty": {
+      "type": "object",
+      "description": "Underlying Casualty Properies",
+      "required": [""],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier"
+        },
+        "effectiveDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Underlying casualty effective date"
+        },
+        "expirationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Underlying casualty expiration date"
+        },
+        "primary1MillionPremium": {
+          "type": "integer",
+          "description": "Primary 1 million premium in millions"
+        },
+        "jurisdiction": {
+          "type": "string",
+          "description": "jurisdiction"
+        }
+      }
+    },
+    "UnderlyingAuto": {
+      "type": "object",
+      "description": "Underlying auto properties",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier"
+        },
+        "effectiveDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Underlying auto effective date"
+        },
+        "expirationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Underlying auto expiration date"
+        },
+        "premium": {
+          "type": "string",
+          "format": "cov-decimal",
+          "description": "Underlying auto policy premium"
+        },
+        "privatePassengerTrucks": {
+          "type": "integer",
+          "description": "Number of private passenger trucks"
+        },
+        "lightTrucks": {
+          "type": "integer",
+          "description": "Number of light trucks"
+        },
+        "mediumTrucks": {
+          "type": "integer",
+          "description": "Number of mediumt trucks"
+        },
+        "heavyTrucks": {
+          "type": "integer",
+          "description": "Number of heavy trucks"
+        },
+        "extraHeavyTrucks": {
+          "type": "integer",
+          "description": "Number of extra heavy trucks"
+        },
+        "radius": {
+          "type": "string",
+          "enum": ["local", "intermediate"]
+        },
+        "businessUse": {
+          "type": "string",
+          "enum": ["commercial", "service", "retail"]
+        },
+        "territoryType": {
+          "type": "string",
+          "enum": ["rural", "city", "metro", "super"]
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["low", "high"]
+        }
+      }
+    }
+  }
+}
